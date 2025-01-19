@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #f5f5f5;
+    --button-color: #ffffff;
+    --button-hover-color: #f0f0f0;
+    --button-text-color: #000000;
+    --display-bg-color: #222222;
+    --display-text-color: #ffffff;
+    --modal-bg-color: #f5f5f5;
+    --modal-text-color: #000000;
+    --modal-button-color: #ffffff;
+    --modal-button-hover-color: #f0f0f0;
+    --modal-button-text-color: #000000;
+    --input-bg-color: #ffffff;
+    --input-text-color: #000000;
+    --select-bg-color: #ffffff;
+    --select-text-color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+#calculator {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.display {
+    text-align: right;
+    font-size: 2.5em;
+    padding: 10px;
+    background-color: var(--display-bg-color);
+    color: var(--display-text-color);
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.display::-webkit-scrollbar {
+    height: 8px;
+}
+
+.display::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.display::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.display::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 20px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #ccc;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--modal-bg-color);
+    color: var(--modal-button-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button#close-settings {
+    margin-top: 10px;
+    padding: 10px;
+    background: var(--modal-bg-color);
+    color: var(--modal-button-text-color);
+}
+
+button#close-settings:hover {
+    background: var(--modal-button-hover-color);
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+input, select {
+    margin-top: 5px;
+    border: 1px solid var(--modal-button-color);
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    border-radius: 5px;
+}
+
+select {
+    background-color: var(--select-bg-color);
+    color: var(--select-text-color);
+}
+
+input[type=number]{
+    background-color: var(--modal-bg-color);
+   text-align: center;
+    width: 40px;
+}
