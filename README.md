@@ -1,6 +1,6 @@
 # jsCalculator
-
-## Шаги для сборки и запуска
+## 1. Задача: https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0
+## 2. Шаги для сборки и запуска
 
 1. Клонируйте репозиторий с GitHub
 
