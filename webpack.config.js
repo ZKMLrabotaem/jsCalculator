@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
   },
   devServer: {
     static: path.join(__dirname, 'dist'),
@@ -24,6 +24,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
+      name: false,
     },
   },
   plugins: [
