@@ -157,7 +157,7 @@ export class Calculator {
         .toString()
         .replace(/(\.\d*?)0+$/, '$1')
         .replace(/\.$/, '');
-    } catch (error) {
+    } catch {
       this.currentExpression = 'Error';
     }
   }
